@@ -104,13 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function control(e) {
         squares[currentIndex].classList.remove('snake');
 
-        if (e.keyCode === 39) {
+        if (e.keyCode === 39 && direction != -1) {
             direction = 1; // Se for precionado a seta direita no teclado
-        } else if (e.keyCode === 38) {
+        } else if (e.keyCode === 38 && direction != +width) {
             direction = -width; // Se for precionado a seta pra cima no teclado
-        } else if (e.keyCode === 37) {
+        } else if (e.keyCode === 37 && direction != 1) {
             direction = -1; // Se for precionado a seta esquerda no teclado
-        } else if (e.keyCode === 40) {
+        } else if (e.keyCode === 40 && direction != -width) {
             direction = +width; // Se for precionado a seta pra baixo no teclado
         }
 
